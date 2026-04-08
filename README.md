@@ -32,8 +32,9 @@ File: 'icmp_traffic.pcapng'
 - Continuous sequence numbers
 
 ## Filter used:
-
+```python
 icmp
+```
 
 ## 👉 Analysis:
 
@@ -52,8 +53,9 @@ File: port_scan.pcapng
 - Ports scanned:21, 25, 80, 135, 8080, etc.
 
 ## Filter used:
-
+```python
 tcp.flags.syn == 1 && tcp.flags.ack == 0
+```
 
 ## 👉 Analysis:
 
@@ -73,8 +75,10 @@ File: dns_anomaly.pcapng
 - Protocol: UDP (Port 53)
 
 ## Filter used:
-
+```python
 dns
+```
+
 
 ## 👉 Analysis:
 
@@ -91,8 +95,10 @@ File: icmp_dns.pcapng
 - ICMP requests + DNS queries together
 
 ## Filter used:
-
+```python
 icmp || dns
+```
+
 
 ## 👉 What Observed:
 
@@ -111,8 +117,11 @@ File: tcp_handshake_http_keepalive.pcapng
 
 
 ## Filter used:
-
+```python
 tcp.port == 9000
+```
+
+
 
 ## 👉 Observed:
 
