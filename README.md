@@ -6,6 +6,9 @@ Traffic was generated from an attacker machine (Kali Linux) and captured on a vi
 
 The main objective is to understand normal vs suspicious traffic patterns and how a security analyst detects activities like port scanning, DNS queries, and ICMP behavior.
 
+<p align="center"> <img src="screenshot/p1.jpg" width="800"/> </p>
+
+
 
 ## 🛠 Tools Used
 - Wireshark
@@ -13,12 +16,16 @@ The main objective is to understand normal vs suspicious traffic patterns and ho
 - Kali Linux
 - Windows
 - VMware Workstation (Host-Only Network)
-# 📁 PCAP Files & Analysis
+ 
+ # 📁 PCAP Files & Analysis
    ##  1️⃣ ICMP Traffic (Ping Test)
 
 File: 'icmp_traffic.pcapng'
 
-From your screenshot:
+<p align="center">
+  <img src="screenshot/icmp 2.png.png" width="800"/>
+</p>
+
 
 - Multiple ICMP Echo Requests observed
 - Message: “no response found”
@@ -38,7 +45,8 @@ icmp
 
 File: port_scan.pcapng
 
-From your SYN scan screenshot:
+<p align="center"> <img src="screenshot/portscan SYN.png.png" width="800"/> </p>
+
 
 - Multiple TCP packets with [SYN] flag
 - Ports scanned:21, 25, 80, 135, 8080, etc.
@@ -56,7 +64,8 @@ tcp.flags.syn == 1 && tcp.flags.ack == 0
 
 File: dns_anomaly.pcapng
 
-From your DNS screenshots:
+<p align="center"> <img src="screenshot/dns 1.png.png" width="800"/> </p>
+
 
 - Queries for:
      - debian.pool.ntp.org
@@ -76,7 +85,8 @@ dns
 
 File: icmp_dns.pcapng
 
-From your combined filter screenshot:
+<p align="center"> <img src="screenshot/3.png" width="800"/> </p>
+
 
 - ICMP requests + DNS queries together
 
@@ -97,7 +107,8 @@ icmp || dns
 
 File: tcp_handshake_http_keepalive.pcapng
 
-From your last screenshot:
+<p align="center"> <img src="screenshot/tcp_handshake_http_keepalive.pcapng.png" width="800"/> </p>
+
 
 ## Filter used:
 
